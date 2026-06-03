@@ -102,12 +102,15 @@
   .nav-toggle {
     background: none;
     border: none;
-    padding: 0.5rem;
-    margin: -0.5rem;
+    padding: 0.75rem;
+    margin: -0.75rem;
     cursor: pointer;
     display: flex; flex-direction: column;
+    justify-content: center;
     gap: 5px;
     align-items: flex-end;
+    min-width: 44px;
+    min-height: 44px;
   }
   .nav-toggle span {
     display: block;
@@ -128,6 +131,8 @@
     transition: opacity 300ms ease;
     display: flex; flex-direction: column;
     padding: 0.9rem 2rem 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .menu.open {
     opacity: 1;
@@ -152,15 +157,15 @@
   }
   .menu .close {
     background: none; border: none;
-    padding: 0.5rem; margin: -0.5rem;
+    padding: 0.75rem; margin: -0.75rem;
     cursor: pointer;
-    width: 36px; height: 36px;
+    width: 44px; height: 44px;
     position: relative;
   }
   .menu .close::before, .menu .close::after {
     content: '';
     position: absolute;
-    left: 6px; top: 50%;
+    left: 10px; top: 50%;
     width: 24px; height: 1.5px;
     background: var(--leather);
   }
@@ -1204,6 +1209,34 @@
     .logistics { grid-template-columns: 1fr; }
     .cred-strip .cred-row { gap: 0.75rem 1.5rem; font-size: 0.95rem; }
     .form-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 3rem 1.25rem 2.5rem; }
+    section.block { padding: 3.25rem 1.25rem; }
+    .phase-grid { grid-template-columns: 1fr; }
+    .operators { grid-template-columns: 1fr 1fr; }
+    .outcomes { grid-template-columns: 1fr; }
+    .stat { padding: 1.5rem 1rem; }
+    .card { padding: 1.5rem 1.5rem 1.25rem; }
+    .card .num { margin-bottom: 1.25rem; }
+    .outcome { padding: 1.5rem 1.5rem 1.25rem; }
+    .outcome .num { margin-bottom: 1.25rem; }
+    .teacher { padding: 1.25rem; gap: 1rem; }
+    .teacher .bio { font-size: 0.92rem; }
+    .week-summary { grid-template-columns: 56px 1fr 24px; gap: 0.75rem; padding: 0.9rem 0.25rem; }
+    .week-summary .title { font-size: 1.05rem; }
+    .week-detail { grid-template-columns: 56px 1fr 24px; gap: 0.75rem; padding-left: 0.25rem; }
+    .apply .panel { padding: 2.5rem 1.25rem; }
+    .apply .cta-row .btn, .form-grid .submit-row button { min-width: 0; width: 100%; }
+    .demo-day { padding: 3.5rem 1.25rem; }
+    .demo-day .agenda { padding: 0.25rem 1.25rem; }
+    .demo-day .agenda-row { padding: 1.1rem 0; grid-template-columns: 48px 1fr; gap: 1rem; }
+  }
+
+  @media (max-width: 360px) {
+    .hero h1 { font-size: 2.5rem; }
+    .price-num { font-size: 2.8rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
