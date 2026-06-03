@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background-color: #F7F4EC;
+    background-image:
+      linear-gradient(to right, rgba(200, 190, 175, 0.22) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(200, 190, 175, 0.22) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: #2E4538;
+    font-family: 'Inter', sans-serif;
+    padding: 64px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .mark {
+    width: 38px; height: 38px;
+    display: block;
+  }
+  .wordmark {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2E4538;
+  }
+  .headline {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 168px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: #2E4538;
+    margin-top: -20px;
+  }
+  .headline .hl {
+    display: inline-block;
+    background-image: linear-gradient(
+      100deg,
+      rgba(245, 183, 0, 0) 0.5%,
+      rgba(245, 183, 0, 0.94) 2%,
+      rgba(255, 201, 41, 1) 50%,
+      rgba(245, 183, 0, 0.94) 98%,
+      rgba(245, 183, 0, 0) 99.5%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 62%;
+    background-position: 0 80%;
+    padding: 0 14px;
+    transform: rotate(-0.6deg);
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .label {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #2E4538;
+  }
+  .meta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #5A5852;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+    <svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="8,2 24,2 24,20 8,20" fill="#F5B700"/>
+      <rect x="8" y="2" width="16" height="3" fill="#C7402D"/>
+      <polygon points="8,20 24,20 20,24 12,24" fill="#E8D9B5"/>
+      <polygon points="12,24 20,24 16,30" fill="#1C1B1A"/>
+    </svg>
+    <div class="wordmark">Elective</div>
+  </div>
+
+  <div class="headline">
+    Make your<br>
+    <span class="hl">first dollar.</span>
+  </div>
+
+  <div class="bottom">
+    <div class="label">After-school cohort . Horizon West</div>
+    <div class="meta">Fall 2026 . 9 weeks . Demo Day</div>
+  </div>
+</body>
+</html>
